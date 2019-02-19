@@ -1,0 +1,103 @@
+body{display:table;background-image:url(img/sky.png);background-repeat:no-repeat;background-size:cover;background-attachment:fixed;width:auto;height:auto}
+.header{position:fixed;z-index:99999999;width:100%}
+ul{list-style-type:none;margin:0;padding:0;overflow:hidden}
+.menu-item{border-bottom-left-radius:15px;border-bottom-right-radius:15px;background-color:rgba(0,0,0,.5);font-size:32px;padding:10px;float:left;color:#fff;text-decoration:line-through;text-decoration-color:red;opacity:0;transform:translateX(-500%);transition:all .3s ease}
+.toggle{background-color:rgba(0,0,0,.5)}
+.toggle>i{padding:20px;font-size:55px;color:#fff;float:left}
+.toggle>i:hover{transform:rotate(360deg);transition:all 1s ease;opacity:1}
+.menu-item i{padding:20px}
+.menu-item i:hover{transition:all .3s ease;transform:scale(1.5);opacity:1}
+.menu-item a:hover{transition:all .3s ease;opacity:1}
+.overlay{background-color:#000}
+@media only screen and (max-width:720px){
+.menu-item{border-bottom-left-radius:15px;border-bottom-right-radius:15px;background-color:rgba(0,0,0,.5);font-size:16px;padding:5px;color:#fff;transition:all .3s ease}
+.toggle>i{padding:10px;font-size:42px;color:#fff;float:left}
+}
+.campNou{background-image:url(img/campnou.png);background-position:center;background-repeat:no-repeat;background-size:cover;position:relative;top:0;left:0;height:100vh;width:100%}
+.ronaldinhoPerson{position:relative;top:58vh;left:-20%;animation-name:player;animation-duration:3s;animation-timing-function:linear;margin:0!important;animation-iteration-count:2;transform-style:preserve-3d}
+.ball{margin:0!important;position:relative;top:67vh;left:30%;animation-name:football;animation-duration:3s;animation-timing-function:linear;animation-iteration-count:2;transition:all 3s ease-in}
+@keyframes player{
+0%{left:100%}
+10%{left:90%}
+20%{left:80%}
+30%{left:70%}
+40%{left:60%}
+50%{left:50%}
+60%{left:40%}
+70%{left:30%}
+80%{left:20%}
+90%{left:10%}
+100%{left:0}
+}
+@keyframes football{
+0%{top:59vh}
+10%{top:60vh}
+20%{top:61vh}
+30%{top:62vh}
+40%{top:63vh}
+50%{top:64vh;left:35%}
+60%{top:65vh;left:30%}
+70%{top:66vh;left:25%}
+80%{top:67vh;left:20%}
+85%{top:65vh;left:10%}
+90%{top:66.5vh;left:0}
+100%{top:67vh}
+}
+.section2{height:100%;width:100%;padding-top:5%;padding-bottom:10%}
+.titleContainer{padding-top:10rem;padding-bottom:10%;z-index:99;width:100%;color:rgba(0,0,255,.7);text-shadow:1px 1px 15px;width:100%;font-family:VT323,monospace}
+.slider{display:flex;justify-content:center}
+.slider .slide{height:50vh;position:relative;z-index:10;border:solid #fff;border-width:1px;background-size:cover;background-repeat:no-repeat;background-position:center;opacity:.5;width:10%;transition:width .8s ease,opacity .5s ease}
+.slider .slide:hover{width:50%;opacity:1}
+@media only screen and (max-width:720px){
+.slider{display:block;justify-content:center;opacity:1}
+.slider .slide{width:100%}
+.slider .slide:hover{width:100%;opacity:1}
+.testimonailDesc{height:100%;border-top-right-radius:0;border-bottom-left-radius:25px;border-bottom-right-radius:25px;background-color:rgba(0,0,0,.5)}
+}
+.section3{height:100%;width:60%}
+.testimonailName{display:flex;justify-content:center;border-right:10px solid #f4f4f4;height:20vh;background-color:rgba(250,255,250,.2);border-top-left-radius:25px;border-bottom-left-radius:25px;box-shadow:-10px 0 50px 4px rgba(0,0,0,.5) inset}
+.testimonailDesc{height:20vh;border-top-right-radius:25px;border-bottom-right-radius:25px;background-color:rgba(0,0,0,.5)}
+.testimonailDesc p{color:#fff;padding-top:15px;padding-left:25px;paddin-right:25px;opacity:.3;cursor:pointer;transition:all .3s ease-in-out}
+.testimonailDesc:hover>p{opacity:1;transform:scale(1.05);transition:all .3s ease-in-out}
+.testAvatar{width:15vh;height:15vh;margin-top:2.5vh;border-radius:50%;border:2px solid #fff;box-shadow:1px 0 50px 4px rgba(0,0,0,.5)}
+.testimonails{margin-bottom:50px}
+@media only screen and (max-width:720px){
+.section3{width:90%}
+.testimonailName{border-right:none;border-top-right-radius:25px;border-top-left-radius:25px;border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom:10px solid #f4f4f4}
+.testimonailDesc{height:100%;border-top-right-radius:0;border-bottom-left-radius:25px;border-bottom-right-radius:25px;background-color:rgba(0,0,0,.5)}
+}
+.section4{padding-top:10%;height:100%;width:100%}
+.award{border:.5px solid gold;opacity:.2;margin-bottom:25%;padding:50px;border-radius:50%;background-color:rgba(0,0,0,.2);transition:all .3s ease-in-out}
+.award:hover{opacity:1;box-shadow:0 0 50px 2px rgba(255,255,255,.2);transition:all .3s ease-in-out}
+.tooltip>.tooltip-inner{padding:25px}
+.section5{width:30%;height:70px;border-radius:20px;background-color:rgb(18,37,51,.5);box-shadow:#fff 1px -10px 30px -20px inset}
+@media only screen and (max-width:720px){
+.section5{width:100%}
+}
+.social{margin-left:2%;margin-right:2%;font-size:48px;padding:25px;width:100%;transition:all 250ms ease-in;animation:blob 10s linear infinite alternate}
+.social:nth-child(1):hover{transition:all 250ms ease-in;background:linear-gradient(165deg,#3b5998,#53bcd4)}
+.social:nth-child(2):hover{transition:all 250ms ease-in;background:linear-gradient(165deg,#1da1f2,#33f2fb)}
+.social:nth-child(3):hover{transition:all 250ms ease-in;background:linear-gradient(165deg,#405de6,#fd1d1d)}
+.social>a>i{color:#fff;transition:all 250ms ease-in}
+.social:hover i{text-shadow:2px 8px 8px rgba(0,0,0,.5);color:#fff;transform:scale(1.3);transition:all 250ms ease-in}
+@-webkit-keyframes blob{
+0%,100%{border-radius:43% 77% 80% 40%/40% 40% 80% 80%}
+20%{border-radius:47% 73% 61% 59%/47% 75% 45% 73%}
+40%{border-radius:46% 74% 74% 46%/74% 58% 62% 46%}
+60%{border-radius:47% 73% 61% 59%/40% 40% 80% 80%}
+80%{border-radius:50% 70% 52% 68%/51% 61% 59% 69%}
+}
+@keyframes blob{
+0%,100%{border-radius:43% 77% 80% 40%/40% 40% 80% 80%}
+20%{border-radius:47% 73% 61% 59%/47% 75% 45% 73%}
+40%{border-radius:46% 74% 74% 46%/74% 58% 62% 46%}
+60%{border-radius:47% 73% 61% 59%/40% 40% 80% 80%}
+80%{border-radius:50% 70% 52% 68%/51% 61% 59% 69%}
+}
+a{color:#fff!important;opacity:.3;transition:all .3s ease-in-out}
+a:hover{opacity:1;transition:all .3s ease-in-out}
+h1{font-size:70px!important}
+p{font-family:'Open Sans',sans-serif;font-size:24px;color:#fff;transition:all .3s ease-in-out}
+@media only screen and (max-width:720px){
+p{font-size:16px}
+}

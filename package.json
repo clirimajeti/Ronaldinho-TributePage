@@ -1,7 +1,7 @@
 {
   "name": "Tributpage",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tribut Template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,6 @@
   "author": "Clirim Ajeti",
   "license": "ISC",
   "dependencies": {
-    "sal.js": "^0.5.0",
-    "scrollreveal": "^4.0.5"
+    "sal.js": "^0.5.0"
   }
 }

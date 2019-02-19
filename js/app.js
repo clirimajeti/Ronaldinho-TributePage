@@ -19,5 +19,11 @@ function show() {
       menu[i].style.opacity = "0";
     }
   }
-
 }
+
+sal();
+
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
