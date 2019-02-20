@@ -1,4 +1,4 @@
-body{display:table;background-image:url(img/sky.png);background-repeat:no-repeat;background-size:cover;background-attachment:fixed;width:auto;height:auto}
+body{display:table;background-image:url(../img/sky.png);background-repeat:no-repeat;background-size:cover;background-attachment:fixed;width:auto;height:auto}
 .header{position:fixed;z-index:99999999;width:100%}
 ul{list-style-type:none;margin:0;padding:0;overflow:hidden}
 .menu-item{border-bottom-left-radius:15px;border-bottom-right-radius:15px;background-color:rgba(0,0,0,.5);font-size:32px;padding:10px;float:left;color:#fff;text-decoration:line-through;text-decoration-color:red;opacity:0;transform:translateX(-500%);transition:all .3s ease}
@@ -13,7 +13,7 @@ ul{list-style-type:none;margin:0;padding:0;overflow:hidden}
 .menu-item{border-bottom-left-radius:15px;border-bottom-right-radius:15px;background-color:rgba(0,0,0,.5);font-size:16px;padding:5px;color:#fff;transition:all .3s ease}
 .toggle>i{padding:10px;font-size:42px;color:#fff;float:left}
 }
-.campNou{background-image:url(img/campnou.png);background-position:center;background-repeat:no-repeat;background-size:cover;position:relative;top:0;left:0;height:100vh;width:100%}
+.campNou{background-image:url(../img/campnou.png);background-position:center;background-repeat:no-repeat;background-size:cover;position:relative;top:0;left:0;height:100vh;width:100%}
 .ronaldinhoPerson{position:relative;top:58vh;left:-20%;animation-name:player;animation-duration:3s;animation-timing-function:linear;margin:0!important;animation-iteration-count:2;transform-style:preserve-3d}
 .ball{margin:0!important;position:relative;top:67vh;left:30%;animation-name:football;animation-duration:3s;animation-timing-function:linear;animation-iteration-count:2;transition:all 3s ease-in}
 @keyframes player{
