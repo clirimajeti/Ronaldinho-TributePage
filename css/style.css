@@ -1,4 +1,4 @@
-body{display:table;background-image:url(img/sky.png);background-repeat:no-repeat;background-size:cover;background-attachment:fixed;width:auto;height:auto}
+body{display:table;background-image:url(../img/sky.png);background-repeat:no-repeat;background-size:cover;background-attachment:fixed;width:auto;height:auto}
 .header{position:fixed;z-index:99999999;width:100%}
 ul{list-style-type:none;margin:0;padding:0;overflow:hidden}
 .menu-item{border-bottom-left-radius:15px;border-bottom-right-radius:15px;background-color:rgba(0,0,0,.5);font-size:32px;padding:10px;float:left;color:#fff;text-decoration:line-through;text-decoration-color:red;opacity:0;transform:translateX(-500%);transition:all .3s ease}
