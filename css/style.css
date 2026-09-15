@@ -13,35 +13,32 @@ ul{list-style-type:none;margin:0;padding:0;overflow:hidden}
 .menu-item{border-bottom-left-radius:15px;border-bottom-right-radius:15px;background-color:rgba(0,0,0,.5);font-size:16px;padding:5px;color:#fff;transition:all .3s ease}
 .toggle>i{padding:10px;font-size:42px;color:#fff;float:left}
 }
-.campNou{background-image:url(../img/campnou.png);background-position:center;background-repeat:no-repeat;background-size:cover;position:relative;top:0;left:0;height:100vh;width:100%}
-.ronaldinhoPerson{position:relative;top:58vh;left:-20%;animation-name:player;animation-duration:3s;animation-timing-function:linear;margin:0!important;animation-iteration-count:2;transform-style:preserve-3d}
-.ball{margin:0!important;position:relative;top:67vh;left:30%;animation-name:football;animation-duration:3s;animation-timing-function:linear;animation-iteration-count:2;transition:all 3s ease-in}
-@keyframes player{
-0%{left:100%}
-10%{left:90%}
-20%{left:80%}
-30%{left:70%}
-40%{left:60%}
-50%{left:50%}
-60%{left:40%}
-70%{left:30%}
-80%{left:20%}
-90%{left:10%}
-100%{left:0}
+.campNou{background-image:url(../img/campnou.png);background-position:center;background-repeat:no-repeat;background-size:cover;position:relative;top:0;left:0;height:100vh;width:100%;overflow:hidden}
+/* Calibration knobs: where the ball sits relative to the sprite's front foot. */
+.campNou{--foot-x:50px;--foot-y:18vh;--pass:4.5s}
+.ronaldinhoPerson,.ball{position:absolute;margin:0!important;bottom:var(--foot-y);will-change:transform}
+.ronaldinhoPerson{left:0;animation:run var(--pass) linear forwards}
+.ball{left:var(--foot-x);animation:nolook var(--pass) linear forwards}
+/* He runs right-to-left, plants at 50%, and keeps going left. */
+@keyframes run{
+0%{transform:translateX(115vw)}
+42%{transform:translateX(50vw)}
+50%{transform:translateX(45vw);animation-timing-function:cubic-bezier(.2,.6,.35,1)}
+100%{transform:translateX(6vw)}
 }
-@keyframes football{
-0%{top:59vh}
-10%{top:60vh}
-20%{top:61vh}
-30%{top:62vh}
-40%{top:63vh}
-50%{top:64vh;left:35%}
-60%{top:65vh;left:30%}
-70%{top:66vh;left:25%}
-80%{top:67vh;left:20%}
-85%{top:65vh;left:10%}
-90%{top:66.5vh;left:0}
-100%{top:67vh}
+/* Ball tracks his feet to 50% (identical X to @run), then fires back the
+   other way while he never turns his head. Rotation flips sign on contact. */
+@keyframes nolook{
+0%{transform:translateX(115vw) rotate(0)}
+42%{transform:translateX(50vw) rotate(-900deg)}
+50%{transform:translateX(45vw) rotate(-1000deg);animation-timing-function:cubic-bezier(.05,.75,.3,1)}
+64%{transform:translate(82vw,-8vh) rotate(-300deg)}
+78%{transform:translate(102vw,0) rotate(200deg)}
+100%{transform:translate(118vw,0) rotate(520deg)}
+}
+@media(prefers-reduced-motion:reduce){
+.ronaldinhoPerson{animation:none;transform:translateX(6vw)}
+.ball{animation:none;transform:translateX(90vw)}
 }
 .section2{height:100%;width:100%;padding-top:5%;padding-bottom:10%}
 .titleContainer{padding-top:10rem;padding-bottom:10%;z-index:99;width:100%;color:rgba(0,0,255,.7);text-shadow:1px 1px 15px;width:100%;font-family:VT323,monospace}
@@ -57,7 +54,7 @@ ul{list-style-type:none;margin:0;padding:0;overflow:hidden}
 .section3{height:100%;width:60%}
 .testimonailName{display:flex;justify-content:center;border-right:10px solid #f4f4f4;height:20vh;background-color:rgba(250,255,250,.2);border-top-left-radius:25px;border-bottom-left-radius:25px;box-shadow:-10px 0 50px 4px rgba(0,0,0,.5) inset}
 .testimonailDesc{height:20vh;border-top-right-radius:25px;border-bottom-right-radius:25px;background-color:rgba(0,0,0,.5)}
-.testimonailDesc p{color:#fff;padding-top:15px;padding-left:25px;paddin-right:25px;opacity:.3;cursor:pointer;transition:all .3s ease-in-out}
+.testimonailDesc p{color:#fff;padding-top:15px;padding-left:25px;padding-right:25px;opacity:.3;cursor:pointer;transition:all .3s ease-in-out}
 .testimonailDesc:hover>p{opacity:1;transform:scale(1.05);transition:all .3s ease-in-out}
 .testAvatar{width:15vh;height:15vh;margin-top:2.5vh;border-radius:50%;border:2px solid #fff;box-shadow:1px 0 50px 4px rgba(0,0,0,.5)}
 .testimonails{margin-bottom:50px}
